@@ -1,0 +1,18 @@
+[INST] As a detail-oriented developer focused on enhancing the clarity of a test suite, your task is to analyze the provided Java code and generate a descriptive and concise summary of the unit test. Follow these steps:
+   1. Carefully read the Java code between the [CODE] tags.
+   2. Identify the primary functionality or purpose of the test.
+   3. Analyze actions performed in the test.
+   4. Formulate a test method summary that succinctly and concisely captures what the test case does in a bullet point format for easy, quick reading
+   5. Place your complete suggested test summary between the [TESTSUMMARY] and [/TESTSUMMARY] tags, ensuring it is clear and precise without unnecessary descriptions or information.
+   Remember, your focus is on clarity and precision. Use your expertise to provide a meaningful and
+   appropriate summary.[/INST]
+
+[CODE]
+@Test(timeout = 4000)
+public void testEncodedPath()  throws Throwable  {
+    KeycloakUriBuilder uri = KeycloakUriBuilder.fromPath("x");
+    HashMap<String, Integer> map = new HashMap<String, Integer>();
+    URI result = uri.buildFromEncodedMap(map);
+    assertEquals("x", result.getRawPath());
+}
+[/CODE]

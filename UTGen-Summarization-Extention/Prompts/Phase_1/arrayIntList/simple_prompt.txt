@@ -1,0 +1,24 @@
+Please generate a summary of the unit test given between the [CODE] and [/CODE] tags. Please put your answer between [SUMMARY] and [/SUMMARY] tags.
+
+[CODE]
+
+1.
+2. @Test
+3. public void test10() throws Throwable {
+4.   ArrayIntList arrayIntList0 = new ArrayIntList();
+5.
+6.   try {
+7.     arrayIntList0.add(0, 0);
+8.     arrayIntList0.add(0, 1);
+9.     arrayIntList0.add(0, 2);
+10.     assertEquals(3, arrayIntList0.size());
+11.     arrayIntList0.removeElementAt((1));
+12.     fail("Expecting exception: IndexOutOfBoundsException");
+13.   } catch (IndexOutOfBoundsException e) {
+14.     //
+15.     // Should be at least 0 and less than 0, found -1
+16.     //
+17.   }
+18. }
+
+[/CODE]

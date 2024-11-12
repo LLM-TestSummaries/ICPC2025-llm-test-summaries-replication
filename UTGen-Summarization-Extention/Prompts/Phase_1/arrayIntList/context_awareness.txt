@@ -1,0 +1,36 @@
+Please generate a summary of the unit test given between the [CODE] and [/CODE] tags. The method under test is between the [METHOD_TESTED] AND [/METHOD_TESTED] tags. Please put your answer between [SUMMARY] and [/SUMMARY] tags.
+
+[CODE]
+
+1.
+2. @Test
+3. public void test10() throws Throwable {
+4.   ArrayIntList arrayIntList0 = new ArrayIntList();
+5.
+6.   try {
+7.     arrayIntList0.add(0, 0);
+8.     arrayIntList0.add(0, 1);
+9.     arrayIntList0.add(0, 2);
+10.     assertEquals(3, arrayIntList0.size());
+11.     arrayIntList0.removeElementAt((1));
+12.     fail("Expecting exception: IndexOutOfBoundsException");
+13.   } catch (IndexOutOfBoundsException e) {
+14.     //
+15.     // Should be at least 0 and less than 0, found -1
+16.     //
+17.   }
+18. }
+
+[/CODE]
+
+[METHOD_TESTED]
+    public void add(int index, int element) {
+        checkRangeIncludingEndpoint(index);
+        incrModCount();
+        ensureCapacity(_size+1);
+        int numtomove = _size-index;
+        System.arraycopy(_data,index,_data,index+1,numtomove);
+        _data[index] = element;
+        _size++;
+    }
+[/METHOD_TESTED]

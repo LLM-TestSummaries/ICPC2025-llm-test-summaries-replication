@@ -1,0 +1,21 @@
+[INST] As a detail-oriented developer focused on enhancing the clarity of a test suite, your task is to analyze the provided Java code and generate a descriptive and concise summary of the unit test. Follow these steps:
+   1. Carefully read the Java code between the [CODE] tags.
+   2. Identify the primary functionality or purpose of the test.
+   3. Analyze actions performed in the test.
+   4. Formulate a test method summary that succinctly and concisely captures what the test case does in a bullet point format for easy, quick reading
+   5. Place your complete suggested test summary between the [TESTSUMMARY] and [/TESTSUMMARY] tags, ensuring it is clear and precise without unnecessary descriptions or information.
+   Remember, your focus is on clarity and precision. Use your expertise to provide a meaningful and
+   appropriate summary.[/INST]
+
+[CODE]
+
+1. @Test
+2. public void test3() throws Throwable {
+3.   Rational rational0 = new Rational(1L, 3215L);
+4.   Rational rational1 = rational0.abs();
+5.   assertEquals(1L, rational0.numerator);
+6.   assertEquals(3215L, rational0.denominator);
+7.   assertEquals(3.11041E-4F, rational1.floatValue(), 0.01F);
+8. }
+
+[/CODE]

@@ -1,0 +1,31 @@
+[INST] As a detail-oriented developer focused on enhancing the clarity of a test suite, your task is to analyze the provided Java code and generate a descriptive and concise summary of the unit test. Follow these steps:
+   1. Carefully read the Java code between the [CODE] tags.
+   2. Identify the primary functionality or purpose of the test.
+   3. Analyze actions performed in the test.
+   4. Formulate a test method summary that succinctly and concisely captures what the test case does in a bullet point format for easy, quick reading
+   5. Place your complete suggested test summary between the [TESTSUMMARY] and [/TESTSUMMARY] tags, ensuring it is clear and precise without unnecessary descriptions or information.
+   Remember, your focus is on clarity and precision. Use your expertise to provide a meaningful and
+   appropriate summary.[/INST]
+
+[CODE]
+
+1.
+2. @Test
+3. public void test10() throws Throwable {
+4.   ArrayIntList arrayIntList0 = new ArrayIntList();
+5.
+6.   try {
+7.     arrayIntList0.add(0, 0);
+8.     arrayIntList0.add(0, 1);
+9.     arrayIntList0.add(0, 2);
+10.     assertEquals(3, arrayIntList0.size());
+11.     arrayIntList0.removeElementAt((1));
+12.     fail("Expecting exception: IndexOutOfBoundsExcepttion");
+13.   } catch (IndexOutOfBoundsException e) {
+14.     //
+15.     // Should be at least 0 and less than 0, found -1
+16.     //
+17.   }
+18. }
+
+[/CODE]

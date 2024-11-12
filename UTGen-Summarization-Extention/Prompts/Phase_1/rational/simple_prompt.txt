@@ -1,0 +1,14 @@
+Please generate a summary of the unit test given between the [CODE] and [/CODE] tags. Please put your answer between [SUMMARY] and [/SUMMARY] tags.
+
+[CODE]
+
+1. @Test
+2. public void test3() throws Throwable {
+3.   Rational rational0 = new Rational(1L, 3215L);
+4.   Rational rational1 = rational0.abs();
+5.   assertEquals(1L, rational0.numerator);
+6.   assertEquals(3215L, rational0.denominator);
+7.   assertEquals(3.11041E-4F, rational1.floatValue(), 0.01F);
+8. }
+
+[/CODE]
